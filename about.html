@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 
 <head>
     <meta charset="utf-8">
@@ -173,57 +173,90 @@
 
 
     <!-- Footer Start -->
-    
-    <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <style>
+        body {
+            font-family: "Alexandria", serif;
+            text-align: right;
+        }
+        .footer {
+            background: #ff6600;
+            color: #fff;
+        }
+        .footer h4 {
+            color: #fff;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .footer a:hover {
+            color: #222;
+        }
+        .footer .btn-link::before {
+            content: "\f105";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-left: 10px;
+        }
+        .footer .copyright {
+            padding: 20px 0;
+            border-top: 1px solid rgba(256, 256, 256, 0.1);
+            text-align: center;
+        }
+        .map-container {
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+    </style>
+ 
+ 
+    <footer class="container-fluid bg-dark footer mt-5 pt-5" dir="rtl">
         <div class="container py-5">
-            <div class="row g-5">
+            <div class="row g-4">
                 <div class="col-lg-3 col-md-6">
-                    <h1 class="text-white mb-4"><i class="fa fa-building text-primary me-3"></i>passions</h1>
-                    <p>نحن نقدم حلول مبتكرة لتصميم وتركيب وصيانة المطابخ لتناسب احتياجات عملائنا. فريقنا يضمن لك أفضل الخدمات بأعلى جودة واحترافية.</p>
+                    <h1 class="text-white mb-4"><i class="fa fa-building text-primary ms-3"></i>passions</h1>
+                    <p>نحن متخصصون في تصميم وتركيب المطابخ الحديثة التي تتناسب مع احتياجات عملائنا.</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-primary me-1" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-outline-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-primary me-1" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-outline-primary me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-outline-light ms-1" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-light ms-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-light ms-1" href="#"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-light ms-0" href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4" style="text-align: center;">العنوان</h4>
-                    <p><i class="fa fa-map-marker-alt me-3"  style="text-align: left;"></i> العدوه</p>
-                    <p><i class="fa fa-phone-alt me-3" style="text-align: left;"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope me-3" style="text-align: left;"></i>info@passionskitchens.com</p>
+                    <h4 class="text-light mb-4">العنوان</h4>
+                    <p><i class="fa fa-map-marker-alt ms-3"></i> مغاغه</p>
+                    <p><i class="fa fa-phone-alt ms-3"></i>+012 345 67890</p>
+                    <p><i class="fa fa-envelope ms-3"></i>info@example.com</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4"  style="text-align: left;">روابط سريعة</h4>
-                    <a class="btn btn-link" href=""  >عن الشركة</a>
-                    <a class="btn btn-link" href=""  >اتصل بنا</a>
-                    <a class="btn btn-link" href=""  >خدماتنا</a>
-                    <a class="btn btn-link" href=""  >الشروط والأحكام</a>
-                    <a class="btn btn-link" href=""  >الدعم</a>
+                    <h4 class="text-light mb-4">روابط سريعة</h4>
+                    <a class="btn btn-link" href="about.html">من نحن</a>
+                    <a class="btn btn-link" href="contact.html">اتصل بنا</a>
+                    <a class="btn btn-link" href="service.html">خدماتنا</a>
+                    <a class="btn btn-link" href="#">الشروط والأحكام</a>
+                    <a class="btn btn-link" href="#">الدعم</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4"   >لاشتراك</h4>
-                    <p style="text-align: left;">اشترك في نشرتنا للحصول على أحدث الأخبار والعروض الخاصة بالمطابخ.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="البريد الإلكتروني">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2" style="text-align: left;">اشترك</button>
+                    <h4 class="text-light mb-4">موقعنا</h4>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110373.7670928079!2d31.2357111!3d30.0444196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145840f68990bfad%3A0xbbe8fbe0c21b2d5d!2z2LTYsdmD2Kkg2KfZhNmF2YbYqSDYp9mE2KzYp9mB!5e0!3m2!1sar!2seg!4v1646876172011!5m2!1sar!2seg" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
         </div>
         <div class="container-fluid copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a href="#">passions</a>، جميع الحقوق محفوظة.
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <!-- صمم بواسطة <a href="https://htmlcodex.com">HTML Codex</a> -->
-                    </div>
-                </div>
+            <div class="container text-center">
+                <p>&copy; جميع الحقوق محفوظة. <a href="#">passions</a></p>
             </div>
         </div>
-    </div>
+    </footer>
+ 
+    
+    <!-- Footer End -->
     
     <!-- Footer End -->
 

@@ -1,20 +1,21 @@
  .about_img img{
  border-radius: 50%; }
 /********** Template CSS **********/
-body {
-    direction: ltr;
-    text-align: left;
+body p {
+    /* direction: rtl; */
+    text-align: right;
+
 }
 
 .container-xxl {
-    direction: ltr;
+    direction: rtl;
 }
 
 h1, h2, h5, p {
-    text-align: left;
+    text-align: right;
 }
 
-.navbar, .footer {
+.navbar  {
     direction: ltr;
 }
 
@@ -374,7 +375,7 @@ h1, h2, h5, p {
 .testimonial-carousel .owl-nav {
     margin-top: 30px;
     display: flex;
-    justify-content: start;
+    justify-content: end;
 }
 
 .testimonial-carousel .owl-nav .owl-prev,
@@ -397,100 +398,14 @@ h1, h2, h5, p {
     color: #FFFFFF;
     background: var(--primary);
 }
+.testimonial-item img{
+text-align: center;
+}
 
 
 /*** Footer ***/
-.lo h4{
-    text-align: left;
-}
-.lo p{
-    text-align:  left;
-}
-.footer {
-    color: #999999;
-}
-
-.footer .btn.btn-link {
-    display: block;
-    margin-bottom: 5px;
-    padding: 0;
-    text-align: left;
-    color: #999999;
-    font-weight: normal;
-    text-transform: capitalize;
-    transition: .3s;
-    border-radius: 3px;
-
-}
-
-.footer .btn.btn-link::before {
-    position: relative;
-    content: "\f105";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    color: #999999;
-    margin-right: 10px;
-}
-
-.footer .btn.btn-link:hover {
-    color: var(--light);
-    letter-spacing: 1px;
-    box-shadow: none;
-}
-
-.footer .copyright {
-    padding: 25px 0;
-    font-size: 15px;
-    border-top: 1px solid rgba(256, 256, 256, .1);
-}
-
-.footer .copyright a {
-    color: var(--light);
-}
-
-.footer .copyright a:hover {
-    color: var(--primary);
-}
-p{
-    font-family: "Alexandria", serif;
-    font-size: 1.1rem;
-    font-weight: 400;
-    line-height: 1.5;
-
-    text-align: right;
-}
-h1,h2,h3.h4,h5,h6{
-    font-family: "Alexandria", serif;
-    font-weight: 700;
-    line-height: 1.5;
-    color: #212529;
-    text-align: right;
-}
-a{
-    font-family: "Alexandria", serif;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    text-align: right;
-    text-decoration: none;
-}
-span{
-    font-family: "Alexandria", serif;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: right;
-}
-.btn{
-    font-family: "Alexandria", serif;
-
-}
-.locted p{
-    text-align: left;
-}
-
-.text_overlay h4{
-    text-align: center;
-}
+ 
+/* footer */
 
 /* CTA Section */
 .cta {
@@ -527,7 +442,7 @@ span{
     background-color: var(--accent-color);
     transform: translateY(-3px);
 }
-.cta h2,p{
+.cta .cta-content h2,p{
     text-align: center;
 }
 .cta span {
