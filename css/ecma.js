@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
 document.addEventListener("DOMContentLoaded", function () {
     const galleryItems = document.querySelectorAll(".gallery-item img");
     const lightbox = document.getElementById("lightbox");
