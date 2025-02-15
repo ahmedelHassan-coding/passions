@@ -1,4 +1,6 @@
- .about_img img{
+.testimonials .testimonial-card p{text-align: center;}
+.about_img img{
+
  border-radius: 50%; }
 /********** Template CSS **********/
 body p {

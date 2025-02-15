@@ -186,51 +186,73 @@
 
 
     <!-- Appointment Start -->
+
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+            display: none;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+        .btn-primary:disabled {
+            background-color: #ccc;
+            border-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+ 
+
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5">
-                <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-5 col-md-6">
                     <div class="border-start border-5 border-primary ps-4 mb-5">
                         <h6 class="text-body text-uppercase mb-2">التعيين</h6>
                         <h1 class="display-6 mb-0">شركة متخصصة في خدمة وصيانة المطابخ</h1>
                     </div>
                     <p class="mb-0">نحن نقدم حلولًا متميزة لتصميم وبناء وصيانة المطابخ، مع التركيز على الجودة والابتكار في كل تفاصيل المشروع. سواء كنت تبحث عن تصميم مطبخ جديد أو تجديد المطبخ الحالي، نحن هنا لتحقيق رؤيتك.</p>
                 </div>
-                <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <form>
+                <div class="col-lg-7 col-md-6">
+                    <form id="bookingForm">
                         <div class="row g-3">
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control bg-light border-0" id="gname" placeholder="اسم العميل">
+                                    <input type="text" class="form-control" id="gname" placeholder="اسم العميل">
                                     <label for="gname">اسمك</label>
+                                    <div class="error" id="error-gname">* الرجاء إدخال اسمك</div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control bg-light border-0" id="gmail" placeholder="البريد الإلكتروني">
+                                    <input type="email" class="form-control" id="gmail" placeholder="البريد الإلكتروني">
                                     <label for="gmail">بريدك الإلكتروني</label>
+                                    <div class="error" id="error-gmail">* الرجاء إدخال بريد إلكتروني صالح</div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control bg-light border-0" id="cname" placeholder="رقم الهاتف">
+                                    <input type="number" class="form-control" id="cname" placeholder="رقم الهاتف">
                                     <label for="cname">رقم هاتفك</label>
+                                    <div class="error" id="error-cname">* الرجاء إدخال رقم هاتف صحيح</div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control bg-light border-0" id="cage" placeholder="نوع الخدمة">
+                                    <input type="text" class="form-control" id="cage" placeholder="نوع الخدمة">
                                     <label for="cage">نوع الخدمة</label>
+                                    <div class="error" id="error-cage">* الرجاء إدخال نوع الخدمة</div>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control bg-light border-0" placeholder="اترك رسالة هنا" id="message" style="height: 100px"></textarea>
+                                    <textarea class="form-control" placeholder="اترك رسالة هنا" id="message" style="height: 100px"></textarea>
                                     <label for="message">رسالتك</label>
+                                    <div class="error" id="error-message">* الرجاء إدخال رسالتك</div>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">احجز موعدك</button>
+                                <button class="btn btn-primary w-100 py-3"  type="submit" id="submitBtn" disabled>احجز موعدك</button>
                             </div>
                         </div>
                     </form>
@@ -238,6 +260,73 @@
             </div>
         </div>
     </div>
+     
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("bookingForm");
+            const inputs = document.querySelectorAll("input, textarea");
+            const submitBtn = document.getElementById("submitBtn");
+
+            function validateField(input) {
+                const errorMessage = document.getElementById(`error-${input.id}`);
+                if (input.value.trim() === "") {
+                    errorMessage.style.display = "block";
+                    return false;
+                } else {
+                    errorMessage.style.display = "none";
+                    return true;
+                }
+            }
+
+            function validateForm() {
+                let isValid = true;
+                inputs.forEach((input) => {
+                    if (!validateField(input)) {
+                        isValid = false;
+                    }
+                });
+
+                // تحقق من البريد الإلكتروني
+                const emailField = document.getElementById("gmail");
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(emailField.value.trim())) {
+                    document.getElementById("error-gmail").style.display = "block";
+                    isValid = false;
+                } else {
+                    document.getElementById("error-gmail").style.display = "none";
+                }
+
+                // تحقق من رقم الهاتف
+                const phoneField = document.getElementById("cname");
+                const phonePattern = /^\d{10,15}$/;
+                if (!phonePattern.test(phoneField.value.trim())) {
+                    document.getElementById("error-cname").style.display = "block";
+                    isValid = false;
+                } else {
+                    document.getElementById("error-cname").style.display = "none";
+                }
+
+                submitBtn.disabled = !isValid;
+            }
+
+            // تحديث الزر عند إدخال البيانات
+            inputs.forEach((input) => {
+                input.addEventListener("input", validateForm);
+                input.addEventListener("blur", function () {
+                    validateField(input);
+                    validateForm();
+                });
+            });
+
+            form.addEventListener("submit", function (event) {
+                if (submitBtn.disabled) {
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+
+    
     
     <!-- Appointment End -->
 
