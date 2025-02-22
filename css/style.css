@@ -2,6 +2,13 @@
 .about_img img{
 
  border-radius: 50%; }
+
+ .service-item img {
+  width: 100%;
+  height: 250px; /* Adjust height as needed */
+  object-fit: contain; /* Ensures images fill the area without distortion */
+  display: block; /* Removes extra spacing under images */
+}
 /********** Template CSS **********/
 body p {
     /* direction: rtl; */
@@ -533,7 +540,7 @@ border-radius: 8px;
   /* Content Column */
   .section-header {
     margin-bottom: 2rem;
-    border-right: 4px solid #f66d04;
+    border-right: 4px solid var(--primary-color);
     padding-right: 1rem;
   }
   
@@ -958,3 +965,13 @@ font-size: 30px;
 
 
 /* cool cards */
+
+
+/* gallery */
+
+
+
+
+
+
+/* gallery */
