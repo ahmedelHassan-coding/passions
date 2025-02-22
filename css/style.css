@@ -540,7 +540,7 @@ border-radius: 8px;
   /* Content Column */
   .section-header {
     margin-bottom: 2rem;
-    border-right: 4px solid var(--primary-color);
+    border-right: 4px solid #ff5507;
     padding-right: 1rem;
   }
   
