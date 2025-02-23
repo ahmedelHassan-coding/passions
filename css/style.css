@@ -985,3 +985,18 @@ font-size: 30px;
  
 
 /* cards */
+
+/* doots */
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999999;
+}
+
+
+/* doots */
