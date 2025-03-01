@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>passions - Home Repair Website Template</title>
+    <title>passions </title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/LOGOjfif.jfif" rel="icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,29 +47,26 @@
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-center">
                 <div class="h-100 d-inline-flex align-items-center border-start border-end px-3">
+                    <small>01145158249</small>
                     <small class="fa fa-phone-alt me-2"></small>
-                    <small>+012 345 6789</small>
+
                 </div>
-                <div class="h-100 d-inline-flex align-items-center border-end px-3">
-                    <small class="far fa-envelope-open me-2"></small>
-                    <small>info@passionskitchens.com</small>
-                </div>
+                 
                 <div class="h-100 d-inline-flex align-items-center border-end px-3">
                     <small class="far fa-clock me-2"></small>
-                    <small>السبت - الخميس : 09 صباحاً - 09 مساءً</small>
+                    <small> طوال ايام الاسبوع</small>
                 </div>
             </div>
             <div class="col-lg-5 px-5 text-center">
                 <div class="h-100 d-inline-flex align-items-center">
                     <a class="btn btn-square border-end border-start" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-square border-end" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-square border-end" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-square border-end" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-square border-end" href="https://wa.me/201145158249"><i class="fab fa-whatsapp"></i></a>
+                    <!-- <a class="btn btn-square border-end" href=""><i class="fab fa-linkedin-in"></i></a> -->
+                    <a class="btn btn-square border-end" href=""><i class="fab fa-call"></i></a>
                 </div>
             </div>
         </div>
-    </div>
-    
+    </div> 
     <!-- Topbar End -->
 
 
@@ -77,7 +74,9 @@
   
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center">
-            <h1 class="m-0"><i class="fa fa-building text-primary me-3"></i>passions</h1>
+            <h1 class="m-0">
+                <img src="img/LOGOjfif.jfif" alt="Logo" style="width: 50px;" class="mb-3">
+            </h1>
         </a>
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -123,13 +122,13 @@
 
         <div class="container">
             <h2 class="section-title" style="color: black">📸 معرض أعمالنا</h2>
-            <div class="gallery-filters">
+            <!-- <div class="gallery-filters">
                 <button class="gallery-filter active" data-filter="all">الكل</button>
                 <button class="gallery-filter" data-filter="modern">مطابخ مودرن</button>
                 <button class="gallery-filter" data-filter="classic">مطابخ كلاسيك</button>
                 <button class="gallery-filter" data-filter="wood">مطابخ جديدة</button>
                 <button class="gallery-filter" data-filter="aluminum">مطابخ المونيوم</button>
-            </div>
+            </div> -->
             <div class="gallery-grid">
                 <div class="gallery-item" data-category="modern">
                     <img src="img/square/pexels-heyho-6301185.jpg" alt="مطبخ مودرن">
@@ -252,10 +251,21 @@
                                     <label for="message">رسالتك</label>
                                     <div class="error" id="error-message">* الرجاء إدخال رسالتك</div>
                                 </div>
+                                <div class="col-12">
+                                    <h2>ارفق تصميمك</h2>
+                                    
+                                    <form action="upload.php" method="POST" enctype="multipart/form-data">
+                                        <input type="file" name="image" required>
+                                        <br><br>
+                                        <input type="submit" name="submit" value="ارسال" class="btn btn-primary py-2 px-5 col-12">
+                                    </form>
+                                </div>
+                              
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3"  type="submit" id="submitBtn" disabled>احجز موعدك</button>
+                                <!-- <button class="btn btn-primary w-100 py-3"  type="submit" id="submitBtn" >احجز موعدك</button> -->
                             </div>
+                            
                         </div>
                     </form>
                 </div>
@@ -378,20 +388,24 @@
         <div class="container py-5">
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6">
-                    <h1 class="text-white mb-4"><i class="fa fa-building text-primary ms-3"></i>passions</h1>
+                    <h1 class="m-0">
+                        <img src="img/LOGOjfif.jfif" alt="Logo" style="width: 50px;" class="mb-3">
+                    </h1>
                     <p>نحن متخصصون في تصميم وتركيب المطابخ الحديثة التي تتناسب مع احتياجات عملائنا.</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-light ms-1" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-light ms-1" href="https://wa.me/201145158249"><i class="fab fa-whatsapp"></i></a>
                         <a class="btn btn-square btn-outline-light ms-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-light ms-1" href="#"><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-outline-light ms-0" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <!-- <a class="btn btn-square btn-outline-light ms-1" href="#"><i class="fab fa-youtube"></i></a> -->
+                        <!-- <a class="btn btn-square btn-outline-light ms-0" href="#"><i class="fab fa-linkedin-in"></i></a> -->
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">العنوان</h4>
-                    <p><i class="fa fa-map-marker-alt ms-3"></i> مغاغه</p>
-                    <p><i class="fa fa-phone-alt ms-3"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope ms-3"></i>info@example.com</p>
+                    <p><i class="fa fa-map-marker-alt ms-3"></i>  منشيه المصري امام مسجد ناصر
+
+                    </p>
+                    <p><i class="fa fa-phone-alt ms-3"></i>01145158249</p>
+                    <!-- <p><i class="fa fa-envelope ms-3"></i>info@example.com</p> -->
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">روابط سريعة</h4>
